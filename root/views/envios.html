@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Consulta el estado de tu envio">
+  <meta name="keywords"  content="Envio, Entrega, Demora, Estado">
+  <link rel="icon" type="image/x-icon" href="../images/Iconos/logo.svg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <title>Consulta de Envio</title>
+</head>
+
+<body>
+  <header>
+    <a href="../index.html" class="btnImg"><img src="../images/iconos/logo.svg" alt=""></a>
+    <div class="menu">
+      <div class="btn">
+        <i class="fas fa-times closeBtn"></i>
+      </div>
+      <ul>
+        <li><a href="novedades.html">Novedades</a></li>
+        <li><a href="categorias.html">Categorias</a>
+          <ul class="categorias">
+            <li><a href="">Tecnologia</a></li>
+            <li><a href="">Electro y Hogar</a></li>
+            <li><a href="">Salud y Belleza</a></li>
+            <li><a href="">Seguridad y Vigilacia</a></li>
+          </ul>
+        </li>
+        <li><a href="ofertas.html">Ofertas</a></li>
+        <li><a href="envios.html">Envios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="btn">
+      <i class="fas fa-bars menuBtn"></i>
+    </div>
+  </header>
+  <div class="subMenu"></div>
+
+  <main>
+    <div class="contenedor">
+      <h1 class="titulo">Sigue tu compra</h1>
+      <div class="container">
+        <div class="row">
+          <section class="col-xs-12 col-sm-12  offset-md-2 col-md-8 offset-lg-4 col-lg-4 envio">
+            <form c>
+              <div class="titleConsulta">
+                <label for="" class=" form-label">Estado del Envio</label>
+                <div id="emailHelp" class="form-text">Ingresá el email que utilizaste al hacer tu compra.</div>
+                <input placeholder="ejemplo@gmail.com" type="email" class="form-control" id="exampleInputEmail1"
+                  aria-describedby="emailHelp">
+              </div>
+              <button type="submit" class="btn btn-info">Consultar</button>
+            </form>
+          </section>
+        </div>
+      </div>
+      <div class="informacionNovedades">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-info morado" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Informacion
+        </button>
+    
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Informacion sobre las novedades</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Para otras consultas enviarlo a consultas@gijutsu.com.ar</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </main>
+  
+
+  <footer class="contacto pageEnvios ">
+    <div class="contenedorInfo">
+      <div class="infoRedes">
+        <span>Encontranos en:</span>
+        <a href="https://www.facebook.com" target="_blank"><img src="../images/redes/facebook.svg" alt="facebook"></a>
+        <a href="https://twitter.com" target="_blank"><img src="../images/redes/twitter.svg" alt="twitter"></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="../images/redes/instagram.svg" alt="instagram"></a>
+      </div>
+      <span>© Gijutsu 2021 - Todos los derechos reservados</span>
+    </div>
+    <div class="contenedorInfo">
+      <div class="nosotros">
+        <a href="">Nosotros</a>
+        <a href="">Contactanos</a>
+        <a href="">Politicas de privacidad</a>
+      </div>
+    </div>
+    <div class="contenedorInfo ">
+      <img src="../images/iconos/creditCard.svg" alt="">
+      <p>¡Podés pagar con nuestras tarjetas seleccionadas en cuotas y sin interés!</p>
+    </div>
+  </footer>
+  <script src="../js/script.js"></script>
+  <script src="../js/bootstrap/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Busca la Categorias que buscas de todos nuestros productos">
+  <meta name="keywords"  content="Categoria, Busqueda, Clasificacion">
+  <link rel="icon" type="image/x-icon" href="../images/Iconos/logo.svg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <title>Categorias</title>
+</head>
+
+<body>
+  <header>
+    <a href="../index.html" class="btnImg"><img src="../images/Iconos/logo.svg" alt=""></a>
+    <div class="menu">
+      <div class="btn">
+        <i class="fas fa-times closeBtn"></i>
+      </div>
+      <ul>
+        <li><a href="novedades.html">Novedades</a></li>
+        <li><a href="categorias.html">Categorias</a>
+          <ul class="categorias">
+            <li><a href="">Tecnologia</a></li>
+            <li><a href="">Electro y Hogar</a></li>
+            <li><a href="">Salud y Belleza</a></li>
+            <li><a href="">Seguridad y Vigilacia</a></li>
+          </ul>
+        </li>
+        <li><a href="ofertas.html">Ofertas</a></li>
+        <li><a href="envios.html">Envios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="btn">
+      <i class="fas fa-bars menuBtn"></i>
+    </div>
+  </header>
+  <div class="subMenu"></div>
+  <main>
+    <div class="contenedor">
+      <h1 class="titulo">Categorias</h1>
+      <section class="categorias">
+        <article class="cardCategoria card-1">
+          <a href="">
+            <div class="nombreCategoria">
+              <h2>Tecnologia</h2>
+            </div>
+            <div class="contImg">
+              <img src="../images/Categorias/tecnologia.svg" alt="">
+            </div>
+            <div class="verMasBtn">
+              <p>Ver mas</p>
+            </div>
+          </a>
+        </article>
+        <article class="cardCategoria card-2">
+          <a href="">
+            <div class="nombreCategoria">
+              <h2>Electro y Hogar</h2>
+            </div>
+            <div class="contImg">
+              <img src="../images/Categorias/ElectroHogar.svg" alt="">
+            </div>
+            <div class="verMasBtn">
+              <p>Ver mas</p>
+            </div>
+          </a>
+        </article>
+        <article class="cardCategoria card-3">
+          <a href="">
+            <div class="nombreCategoria">
+              <h2>Salud y Belleza</h2>
+            </div>
+            <div class="contImg">
+              <img src="../images/Categorias/SaludBelleza.svg" alt="">
+            </div>
+            <div class="verMasBtn">
+              <p>Ver mas</p>
+            </div>
+          </a>
+        </article>
+        <article class="cardCategoria card-4">
+          <a href="">
+            <div class="nombreCategoria">
+              <h2>Seguridad y Vigilacia</h2>
+            </div>
+            <div class="contImg">
+              <img src="../images/Categorias/seguridadVigilacia.svg" alt="">
+            </div>
+            <div class="verMasBtn">
+              <p>Ver mas</p>
+            </div>
+          </a>
+        </article>
+      </section>
+      <div class="informacionNovedades">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-info naranja" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Informacion
+        </button>
+    
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Informacion sobre las novedades</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Todos los productos montrados en cada categoria son sujetos a tener stock</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="contacto categorias__footer">
+    <div class="contenedorInfo">
+      <div class="infoRedes">
+        <span>Encontranos en:</span>
+        <a href="https://www.facebook.com" target="_blank"><img src="../images/redes/facebook.svg" alt="facebook"></a>
+        <a href="https://twitter.com" target="_blank"><img src="../images/redes/twitter.svg" alt="twitter"></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="../images/redes/instagram.svg" alt="instagram"></a>
+      </div>
+      <span>© Gijutsu 2021 - Todos los derechos reservados</span>
+    </div>
+    <div class="contenedorInfo">
+      <div class="nosotros">
+        <a href="">Nosotros</a>
+        <a href="">Contactanos</a>
+        <a href="">Politicas de privacidad</a>
+      </div>
+    </div>
+    <div class="contenedorInfo ">
+      <img src="../images/iconos/creditCard.svg" alt="">
+      <p>¡Podés pagar con nuestras tarjetas seleccionadas en cuotas y sin interés!</p>
+    </div>
+  </footer>
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script type="text/javascript" src="../js/bootstrap/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+    integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+    integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

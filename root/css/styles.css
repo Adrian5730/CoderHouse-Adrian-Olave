@@ -1,0 +1,604 @@
+/*Imports*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.btn-info.morado {
+  background: #C0A8FF;
+  border-color: #C0A8FF;
+}
+
+.btn-info.naranja {
+  background: #FFC13C;
+  border-color: #FFC13C;
+}
+
+.btn-info.azulClaro {
+  background: #0dcaf0;
+  border-color: #0dcaf0;
+}
+
+.btn-info.azul {
+  background: #357BFF;
+  border-color: #357BFF;
+}
+
+.btn-info.vinoTinto {
+  background: #FF8273;
+  border-color: #FF8273;
+}
+
+/*  Comienza index  */
+/* Estilos generales*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header */
+header {
+  background-color: #2e2e2e;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+  transition: 0.6s;
+}
+header .menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .menu a:hover {
+  color: #000;
+  background: #fff;
+}
+header .btn {
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+header ul {
+  padding: 0;
+}
+header a.btnImg {
+  text-align: center;
+  align-items: center;
+  width: auto;
+}
+header a.btnImg img {
+  width: 80%;
+}
+header div.menu ul {
+  list-style: none;
+  display: flex;
+}
+header div.menu ul li a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0 30px;
+  padding: 0 10px;
+  border-radius: 20px;
+  transition: 0.3s;
+  transition-property: color, background;
+}
+header div.menu ul li:hover ul {
+  display: block;
+  background-color: rgba(46, 46, 46, 0.884);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  margin-left: 31px;
+  border-radius: 10px;
+}
+header div.menu ul ul {
+  position: absolute;
+  display: none;
+  z-index: 2101;
+}
+header div.menu ul ul li {
+  display: block;
+  padding: 12px 0;
+}
+header div.menu ul ul li a {
+  color: #fff;
+}
+header div.subMenu {
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0%;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  top: 143px;
+  display: none;
+}
+header div.subMenu .active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+  display: block;
+  transition: opacity 0.2 ease-out 0s, visibility 0.3s ease-out 0s;
+}
+
+header.sticky {
+  background: #14074b;
+  padding: 15px 100px;
+}
+
+@media (max-width: 1100px) {
+  header .btn {
+    display: block;
+  }
+  header .menu {
+    position: fixed;
+    background: #1483d5;
+    min-width: 400px;
+    height: 100vh;
+    top: 0;
+    right: -138%;
+    padding: 80px 50px;
+    transition: 0.5s;
+    transition-property: right;
+  }
+  header .active {
+    right: 0;
+  }
+  header .closeBtn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 25px;
+  }
+  header div.menu ul {
+    flex-direction: column;
+  }
+  header div.menu ul li a {
+    display: block;
+    font-size: 20px;
+    margin: 20px;
+    padding: 0 15px;
+  }
+}
+@media (max-width: 425px) {
+  header .sticky {
+    padding: 10px 30px;
+  }
+}
+/* Slider */
+section.carrucel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 153px;
+}
+section.carrucel div.slider {
+  position: relative;
+  background: #000116;
+  width: 80%;
+  height: 250px;
+  margin: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+section.carrucel div.slider div.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: circle(0% at 0 50%);
+          clip-path: circle(0% at 0 50%);
+}
+section.carrucel div.slider div.slide img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+section.carrucel div.slider div.active {
+  -webkit-clip-path: circle(150% at 0 50%);
+          clip-path: circle(150% at 0 50%);
+  transition: 2s;
+}
+section.carrucel div.slider .navigation {
+  height: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5 ease;
+  /*Aqui puedo sinplificar*/
+}
+section.carrucel div.slider .navigation .prevBtn,
+section.carrucel div.slider .navigation .nextBtn {
+  z-index: 998;
+  font-size: 2em;
+  color: #222;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  cursor: pointer;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 2px;
+}
+section.carrucel div.slider div.navigationVisibility {
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+}
+section.carrucel div.slider div.navigationVisibility div.slideIcon {
+  z-index: 998;
+  background: rgba(0, 0, 0, 0.5);
+  width: 10px;
+  height: 10px;
+  margin: 0 12px;
+  border-radius: 2px;
+  box-shadow: 0 5px 25px rgba(1, 1, 1, 0.2);
+}
+section.carrucel div.slider div.navigationVisibility div.slideIcon .active {
+  background: #4285f4;
+}
+section.carrucel div.slider:hover .navigation {
+  opacity: 1;
+}
+
+@media (max-width: 800px) {
+  section.carrucel div.slider {
+    width: 100%;
+    height: 169px;
+  }
+  section.carrucel div.slider .navigation {
+    height: 169px;
+  }
+}
+/*  Articulos  */
+section.products {
+  margin: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+section.products article.cardProduct {
+  border: 1px solid #eaeaea;
+  width: 22%;
+  align-items: center;
+  border-radius: 15px;
+  margin: 10px auto;
+  text-align: center;
+}
+section.products article.cardProduct a {
+  text-decoration: none;
+  display: flex;
+}
+section.products article.cardProduct .card__imgproduct {
+  padding: 10px 0 10px 10px;
+  display: inline-block;
+}
+section.products article.cardProduct:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+section.products div.card-Information {
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+section.products div.card-Information div.card__title h2 {
+  color: #444;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 15px;
+}
+section.products div.card-Information div.card__envio {
+  color: seagreen;
+}
+section.products div.card-Information div.card__cost {
+  color: #000;
+}
+
+@media (max-width: 1440px) {
+  section.products article.cardProduct {
+    width: 30%;
+  }
+}
+@media (max-width: 1100px) {
+  section.products article.cardProduct {
+    width: 40%;
+  }
+}
+@media (max-width: 700px) {
+  section.products article.cardProduct {
+    width: 80%;
+  }
+}
+/*  Footer  */
+footer {
+  display: flex;
+  margin: auto;
+  text-align: center;
+  justify-content: space-around;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  background-color: #001f3f;
+  color: #fff;
+  flex-wrap: wrap;
+  padding: 15px 0px;
+}
+footer div.contenedorInfo {
+  justify-content: center;
+  font-size: 15px;
+  border-left: 1px solid #000;
+  width: 33%;
+}
+footer div.contenedorInfo div.infoRedes {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px 0px;
+  display: flex;
+}
+footer div.contenedorInfo div.infoRedes img {
+  width: 35px;
+  margin: 0 10px;
+}
+footer div.contenedorInfo div.nosotros {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+}
+footer div.contenedorInfo div.nosotros a {
+  text-decoration: none;
+  color: #fff;
+  margin: 5px;
+}
+footer span {
+  font-size: 14px;
+}
+footer div.linea {
+  width: 95%;
+  margin: auto;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  footer {
+    padding: 0;
+    padding-bottom: 20px;
+  }
+
+  footer div.contenedorInfo {
+    margin: 10px 0;
+    width: 50%;
+    border: 0px;
+  }
+}
+@media (max-width: 700px) {
+  footer div.contenedorInfo {
+    width: 100%;
+  }
+
+  footer div.linea {
+    display: block;
+  }
+}
+/*  Termina index  */
+/*  Comienza Novedades/ofertas */
+main .titulo {
+  margin: 180px 0px 20px 0;
+  text-align: center;
+}
+main #tituloPrincipal {
+  margin: 10px 0;
+  text-align: center;
+}
+
+section.productsNovedades {
+  text-align: center;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+  justify-content: space-around;
+  display: flex;
+}
+section.productsNovedades div.prodructCaracteristicas {
+  text-align: center;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+  justify-content: space-around;
+  display: flex;
+}
+section.productsNovedades article {
+  margin: 20px 20px;
+  border-radius: 10px;
+  justify-content: space-between;
+  text-align: center;
+  width: 20%;
+}
+section.productsNovedades article div.contImg {
+  position: relative;
+}
+section.productsNovedades article div.contImg img {
+  width: 70%;
+}
+section.productsNovedades article div.contImg img.icono-oferta {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+}
+section.productsNovedades article:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+section.productsNovedades div.infoProduct {
+  font-size: 15px;
+  color: #444;
+  overflow: hidden;
+  text-align: center;
+}
+section.productsNovedades div.infoProduct p {
+  margin-top: 20px;
+}
+
+div.informacionNovedades {
+  justify-content: space-around;
+  margin-top: 20px;
+  display: flex;
+}
+
+@media (max-width: 1220px) {
+  section.productsNovedades article {
+    width: 23%;
+  }
+}
+@media (max-width: 800px) {
+  section.productsNovedades article {
+    width: 30%;
+  }
+}
+@media (max-width: 500px) {
+  section.productsNovedades article {
+    width: 90%;
+  }
+}
+/*  Comienza Categoria */
+section.categorias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+section.categorias a {
+  text-decoration: none;
+  color: #000;
+}
+section.categorias div.nombreCategoria h2 {
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  font-size: 19px;
+}
+section.categorias article.cardCategoria {
+  text-align: center;
+}
+section.categorias article.cardCategoria div.contImg img {
+  width: 200px;
+}
+section.categorias article.cardCategoria:hover {
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+
+@media (max-width: 425px) {
+  section.categorias article.cardCategoria {
+    width: 100%;
+    margin-top: 40px;
+  }
+}
+/*  Comienza Contacto  */
+section.contacto {
+  margin-top: 200px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+section.contacto div.titleContacto {
+  font-family: sans-serif;
+  font-weight: 200;
+  margin-bottom: 30px;
+  text-align: center;
+}
+section.contacto div.titleContacto h2 {
+  font-family: sans-serif;
+  font-weight: 400;
+}
+section.contacto article.contContacto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  align-content: center;
+}
+section.contacto article.contContacto div.iconCircle img,
+section.contacto article.contContacto .iconwhatsapp img {
+  width: 90px;
+  margin-top: 15px;
+}
+section.contacto article.contContacto div.informacionHorarios {
+  display: flex;
+  flex-direction: column;
+}
+section.contacto article.contContacto div.iconCircle,
+section.contacto article.contContacto .iconwhatsapp {
+  width: 120px;
+  height: 120px;
+  background: #f7f7f7;
+  border-radius: 120px;
+  background-color: #95cdf1;
+  opacity: 0.7;
+  margin: 15px auto;
+}
+section.contacto article.contContacto div.iconwhatsapp {
+  background-color: #4bc7b2;
+}
+
+@media (max-width: 1024px) {
+  section.contacto {
+    width: 100%;
+  }
+}
+@media (max-width: 720px) {
+  article.contContacto div.contTel {
+    width: 50%;
+  }
+
+  div.contTelefono {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 520px) {
+  article.contContacto div.contTel {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+/*  Comienza Envios */
+section.envio {
+  text-align: center;
+  margin-top: 50px;
+  box-shadow: 5px 5px 7px 5px rgba(0, 0, 0, 0.1), 5px 5px 7px 5px rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+}
+section.envio div.titleConsulta {
+  align-items: center;
+}
+section.envio div.titleConsulta label {
+  font-size: 2em;
+}
+section.envio div.titleConsulta input {
+  width: 80%;
+  margin: 20px auto;
+}
+section.envio div.titleConsulta h2 {
+  font-size: 130px;
+}
+section.envio button {
+  margin-bottom: 20px;
+}
+
+/*  Comienza Envios */
+/* Error 404 */
+.contenedor {
+  min-height: calc(100vh - 100px - 227px);
+}/*# sourceMappingURL=styles.css.map */

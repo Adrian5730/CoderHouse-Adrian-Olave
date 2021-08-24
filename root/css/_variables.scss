@@ -1,0 +1,29 @@
+$widthMax: 100%;
+$displayFlex: flex;
+$colorHeader: rgb(46, 46, 46);
+$colorHeaderDow: #14074b;
+$colorBlanco: #fff;
+$colorNegro: #000;
+$listStyle: none;
+$displays:(
+    'normal':block,
+    'iregular': inline,
+    'normalIregular': inline-block,
+    'alineado': flex
+);
+$colores:(
+    'morado': #C0A8FF,
+    'naranja': #FFC13C,
+    'azulClaro': #0dcaf0,
+    'azul':  #357BFF,
+    'vinoTinto':#FF8273
+);
+
+@each $colores, $i in $colores {
+    .btn-info{
+        &.#{$colores}{
+            background: $i;
+            border-color: $i;
+        }
+    }
+}
