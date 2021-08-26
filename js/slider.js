@@ -1,38 +1,3 @@
-//SubMenu--opacity
-
-const subMenu = document.querySelector(".subMenu");
-const categorias = document.querySelector(".categorias");
-console.log(categorias)
-categorias.addEventListener("mouseover", () => {
-    subMenu.classList.add('active');
-});
-
-categorias.addEventListener("mouseout", () => {
-    subMenu.classList.remove('active');
-});
-
-
-
-//javascript for navigation bar effect on scroll
-window.addEventListener("scroll", function () {
-    var header = document.querySelector("header");
-    header.classList.toggle('sticky', window.scrollY > 0);
-});
-
-//javascript for responsive navigation sidebar menu
-var menu = document.querySelector('.menu');
-var menuBtn = document.querySelector('.menuBtn');
-var closeBtn = document.querySelector('.closeBtn');
-
-menuBtn.addEventListener("click", () => {
-    menu.classList.add('active');
-});
-
-closeBtn.addEventListener("click", () => {
-    menu.classList.remove('active');
-});
-
-
 //-----------------------Codigo Slider--------------------
 
 const slider = document.querySelector(".slider");
@@ -104,14 +69,3 @@ var repeater = () => {
     }, 8000);
 }
 repeater();
-
-
-slider.addEventListener("mouseover", () => {
-    clearInterval(playSlider);
-});
-
-//start the image slider autoplay again on mouseout
-slider.addEventListener("mouseout", () => {
-    repeater();
-});
-
