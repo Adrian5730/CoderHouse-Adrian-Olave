@@ -437,6 +437,9 @@ section.productsNovedades article {
   text-align: center;
   width: 20%;
 }
+section.productsNovedades article a {
+  text-decoration: none;
+}
 section.productsNovedades article div.contImg {
   position: relative;
 }
