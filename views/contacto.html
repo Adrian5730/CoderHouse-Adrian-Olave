@@ -8,6 +8,7 @@
   <meta name="description" content="Contactanos, estamos esperando tu llamada">
   <meta name="keywords"  content="Contacto, Telefono, WhatsApp, Consultas, Preguntas">
   <link rel="icon" type="image/x-icon" href="../images/iconos/logo.svg" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link rel="stylesheet" href="../css/styles.css">
@@ -15,7 +16,7 @@
 </head>
 
 <body>
-  <header>
+  <header id="header" data-aos="fade-down" data-aos-duration="2000">
     <a href="../index.html" class="btnImg"><img src="../images/iconos/logo.svg" alt="#"></a>
     <div class="menu">
       <div class="btn">
@@ -44,12 +45,12 @@
   <main>
     <div class="contenedor">
       <section class="contacto">
-        <h1 class="titulo">Contactanos</h1>
-        <div class="titleContacto">
+        <h1 class="titulo" data-aos="zoom-in" data-aos-duration="2000">Contactanos</h1>
+        <div class="titleContacto" data-aos="fade-up" data-aos-duration="2000">
           <h2>¿Quieres hacer una compra?, te asesoramos</h2>
           <p>Llamanos o escribenos, estamos para ayudarte</p>
         </div>
-        <article class="contContacto">
+        <article data-aos="fade-up" data-aos-duration="2000" class="contContacto">
           <div class="contTel contCell">
             <div class="iconCircle">
               <img src="../images/iconos/telefono.svg" alt="#">
@@ -63,7 +64,10 @@
           </div>
           <div class="contTel contWhatsapp">
             <div class="iconCircle iconwhatsapp">
-              <img src="../images/redes/whatsapp.svg" alt="#">
+              <a href="https://api.whatsapp.com/send?phone=549152484107&text=Mandame un mensaje para cualquier consulta"
+                class="float" target="_blank">
+                <img src="../images/redes/whatsapp.svg" alt="#">
+              </a>
             </div>
             <div class="informacionHorarios">
               <h4>WhatsApp</h4>
@@ -75,7 +79,10 @@
           </div>
           <div class="contTel contTelefono">
             <div class="iconCircle iconwhatsapp">
-              <img src="../images/redes/whatsapp.svg" alt="#">
+              <a href="https://api.whatsapp.com/send?phone=5491124861074&text=Mandame un mensaje para cualquier consulta"
+                class="float" target="_blank">
+                <img src="../images/redes/whatsapp.svg" alt="#">
+              </a>
             </div>
             <div class="informacionHorarios">
               <h4>Venta Mayorista</h4>
@@ -143,6 +150,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

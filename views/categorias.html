@@ -8,6 +8,7 @@
   <meta name="description" content="Busca la Categorias que buscas de todos nuestros productos">
   <meta name="keywords"  content="Categoria, Busqueda, Clasificacion">
   <link rel="icon" type="image/x-icon" href="../images/Iconos/logo.svg" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="../css/styles.css">
@@ -15,7 +16,7 @@
 </head>
 
 <body>
-  <header>
+  <header id="header" data-aos="fade-down" data-aos-duration="2000">
     <a href="../index.html" class="btnImg"><img src="../images/iconos/logo.svg" alt="#"></a>
     <div class="menu">
       <div class="btn">
@@ -43,9 +44,9 @@
   <div class="subMenu"></div>
   <main>
     <div class="contenedor">
-      <h1 class="titulo">Categorias</h1>
+      <h1 class="titulo" data-aos="zoom-in" data-aos-duration="2000">Categorias</h1>
       <section class="categorias">
-        <article class="cardCategoria card-1">
+        <article class="cardCategoria card-1" data-aos="flip-right" data-aos-duration="1200">
           <a href="#">
             <div class="nombreCategoria">
               <h2>Tecnologia</h2>
@@ -58,7 +59,7 @@
             </div>
           </a>
         </article>
-        <article class="cardCategoria card-2">
+        <article class="cardCategoria card-2" data-aos="flip-right" data-aos-duration="1200">
           <a href="#">
             <div class="nombreCategoria">
               <h2>Electro y Hogar</h2>
@@ -71,7 +72,7 @@
             </div>
           </a>
         </article>
-        <article class="cardCategoria card-3">
+        <article class="cardCategoria card-3" data-aos="flip-right" data-aos-duration="1200">
           <a href="#">
             <div class="nombreCategoria">
               <h2>Salud y Belleza</h2>
@@ -84,7 +85,7 @@
             </div>
           </a>
         </article>
-        <article class="cardCategoria card-4">
+        <article class="cardCategoria card-4" data-aos="flip-right" data-aos-duration="1200">
           <a href="#">
             <div class="nombreCategoria">
               <h2>Seguridad y Vigilacia</h2>
@@ -154,6 +155,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
     integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
     crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

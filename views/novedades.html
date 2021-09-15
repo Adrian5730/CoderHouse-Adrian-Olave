@@ -8,6 +8,7 @@
   <meta name="description" content="Nuestros ultimos productos">
   <meta name="keywords"  content="Novedades, Nuevo, Lo utlimo">
   <link rel="icon" type="image/x-icon" href="../images/iconos/logo.svg"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="../css/styles.css">
@@ -15,7 +16,7 @@
 </head>
 
 <body>
-  <header>
+  <header id="header" data-aos="fade-down" data-aos-duration="2000">
     <a href="../index.html" class="btnImg"><img src="../images/iconos/logo.svg" alt="#"></a>
     <div class="menu">
       <div class="btn">
@@ -42,9 +43,9 @@
   </header>
   <div class="subMenu"></div>
   <main class="Novedadess">
-    <h1 class="titulo">Novedades</h1>
+    <h1 data-aos="zoom-in" data-aos-duration="2000"class="titulo">Novedades</h1>
     <section class="productsNovedades">
-      <article class="article-1">
+      <article class="article-1" data-aos="flip-right" data-aos-duration="1200">
         <div class="contImg">
           <img src="../images/productos/MOTOG8PX.webp" alt="#">
         </div>
@@ -55,7 +56,7 @@
           
         </div>
       </article>
-      <article class="article-1">
+      <article class="article-1" data-aos="flip-right" data-aos-duration="1200">
         <div class="contImg">
           <img src="../images/productos/KPCINT07.webp" alt="#">
         </div>
@@ -65,7 +66,7 @@
           <p>$ 73.749</p>
         </div>
       </article>
-      <article class="article-1">
+      <article class="article-1" data-aos="flip-right" data-aos-duration="1200">
         <div class="contImg">
           <img src="../images/productos/KNOT212N.webp" alt="#">
         </div>
@@ -75,7 +76,7 @@
           <p>$ 95.599</p>
         </div>
       </article>
-      <article class="article-1">
+      <article class="article-1" data-aos="flip-right" data-aos-duration="1200">
         <div class="contImg">
           <img src="../images/productos/KGAMER13.webp" alt="#">
         </div>
@@ -85,7 +86,7 @@
           <p>$1.949</p>
         </div>
       </article>
-      <article class="article-1">
+      <article class="article-1" data-aos="flip-right" data-aos-duration="1200">
         <div class="contImg">
           <img src="../images/productos/LUMIN018.webp" alt="#">
         </div>
@@ -152,6 +153,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
