@@ -30,6 +30,12 @@ header {
   align-items: center;
   padding: 20px 100px;
   transition: 0.6s;
+
+  #carrito{
+    width: 3%;
+    cursor: pointer;
+  }
+
   .menu {
     position: relative;
     display: $displayFlex;
@@ -272,7 +278,7 @@ section.carrucel {
 
 /*  Articulos  */
 
-section.products {
+section#products {
   margin: 0 20px;
   display: $displayFlex;
   flex-wrap: wrap;
@@ -332,19 +338,19 @@ section.products {
 }
 
 @media (max-width: 1440px) {
-  section.products article.cardProduct {
+  section#products article.cardProduct {
     width: 30%;
   }
 }
 
 @media (max-width: 1100px) {
-  section.products article.cardProduct {
+  section#products article.cardProduct {
     width: 40%;
   }
 }
 
 @media (max-width: 700px) {
-  section.products article.cardProduct {
+  section#products article.cardProduct {
     width: 80%;
   }
 }

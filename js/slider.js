@@ -8,7 +8,7 @@ const slideIcons = document.querySelectorAll(".slideIcon");
 const numberOfSlides = slides.length;
 var slideNumber = 0;
 
-//image slider next button
+
 nextBtn.addEventListener("click", () => {
     slides.forEach((slide) => {
         slide.classList.remove("active");
@@ -27,7 +27,7 @@ nextBtn.addEventListener("click", () => {
     slideIcons[slideNumber].classList.add("active");
 });
 
-//image slider previous button
+
 prevBtn.addEventListener("click", () => {
     slides.forEach((slide) => {
         slide.classList.remove("active");
@@ -46,7 +46,7 @@ prevBtn.addEventListener("click", () => {
     slideIcons[slideNumber].classList.add("active");
 });
 
-//Autoplay Imagenes
+
 var playSlider;
 
 var repeater = () => {
